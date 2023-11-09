@@ -36,8 +36,8 @@ export default function App() {
 
   function MyStack() {
     return (
-      // initialRouteName=''
-      <Stack.Navigator initialRouteName='' >
+     
+      <Stack.Navigator initialRouteName='Welcome' >
          <Stack.Screen
           name="Welcome"
           component={Welcome}
@@ -66,10 +66,11 @@ export default function App() {
             headerStyle: { backgroundColor: "#54B8CA" },
           }}
         />
+        
 
         
        
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Register"
           component={Register}
           options={{
@@ -78,9 +79,9 @@ export default function App() {
             headerTitleAlign: "center",
             headerStyle: { backgroundColor: "#54B8CA" },
           }}
-        />
+        /> */}
 
-        <Stack.Screen name='List' component={ListProfe}
+        {/* <Stack.Screen name='List' component={ListProfe}
           options={{
             title: " ",
             headerTintColor: "white",
@@ -175,7 +176,7 @@ export default function App() {
             headerTitleAlign: "center",
             headerStyle: { backgroundColor: "#54B8CA" },
           }}
-        />
+        /> */}
       </Stack.Navigator>
     );
   }
