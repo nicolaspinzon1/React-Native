@@ -8,41 +8,35 @@ import { NavigationContainer } from "@react-navigation/native";
 import Login from "./screens/Login";
 import Home from "./screens/Home";
 import Welcome from "./screens/Welcome";
-import Register from "./screens/Register";
+import RegisterBiometry from "./screens/RegisterBiometry";
 
-import ListProfe from "./screens/ListProfe";  
-import CreateProfe from "./screens/CreateProfe";  
-import ShowProfe from "./screens/ShowProfe";  
+import ListProfe from "./screens/ListProfe";
+import CreateProfe from "./screens/CreateProfe";
+import ShowProfe from "./screens/ShowProfe";
 
-import ListCursos from "./screens/ListCursos";  
-import CreateCursos from "./screens/CreateCursos";  
-import ShowCursos from "./screens/ShowCursos"; 
+import ListCursos from "./screens/ListCursos";
+import CreateCursos from "./screens/CreateCursos";
+import ShowCursos from "./screens/ShowCursos";
 
-import ListAula from "./screens/ListAula";  
-import CreateAula from "./screens/CreateAula";  
-import ShowAula from "./screens/ShowAula";  
+import ListAula from "./screens/ListAula";
+import CreateAula from "./screens/CreateAula";
+import ShowAula from "./screens/ShowAula";
 
-import ListPrograma from "./screens/ListPrograma";  
-import CreatePrograma from "./screens/CreatePrograma";  
-import ShowPrograma from "./screens/ShowPrograma";  
-
-
-
-
-
+import ListPrograma from "./screens/ListPrograma";
+import CreatePrograma from "./screens/CreatePrograma";
+import ShowPrograma from "./screens/ShowPrograma";
 
 export default function App() {
   const Stack = createStackNavigator();
 
   function MyStack() {
     return (
-     
-      <Stack.Navigator initialRouteName='Welcome' >
-         <Stack.Screen
+      <Stack.Navigator initialRouteName="Welcome">
+        <Stack.Screen
           name="Welcome"
           component={Welcome}
           options={{
-            headerShown: false
+            headerShown: false,
           }}
         />
         <Stack.Screen
@@ -66,20 +60,17 @@ export default function App() {
             headerStyle: { backgroundColor: "#54B8CA" },
           }}
         />
-        
 
-        
-       
-        {/* <Stack.Screen
-          name="Register"
-          component={Register}
+        <Stack.Screen
+          name="RegisterBiometry"
+          component={RegisterBiometry}
           options={{
-            title: "Register",
+            title: "RegisterBiometry",
             headerTintColor: "white",
             headerTitleAlign: "center",
             headerStyle: { backgroundColor: "#54B8CA" },
           }}
-        /> */}
+        />
 
         {/* <Stack.Screen name='List' component={ListProfe}
           options={{

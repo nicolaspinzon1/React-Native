@@ -10,21 +10,23 @@ import {
 import React, { useState } from "react";
 import axios from "axios"; // Importa Axios
 
-
 export default function Login(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const logueo = async () => {
-    
     try {
-      console.log(username, password)
-      const response = await axios.post("http://127.0.0.1:8000/users/SignInAPI", {
-        username: username,
-        password: password,
-      });
+      console.log(username, password);
+      const response = await axios.post(
+        "https://7sr75p1l-8000.use2.devtunnels.ms/SignInAPI/",
+        {
+          username: username,
+          password: password,
+          huella: "",
+        }
+      );
 
-      console.log('Respuesta de la API:', response.data);
+      console.log("Respuesta de la API:", response.data);
 
       Alert.alert("Iniciando sesion", "Accediendo...");
 
